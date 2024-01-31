@@ -42,12 +42,11 @@ const app = createApp({
 
     methods: {
         /*
-        * cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, 
+        * M3: cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, 
         * che quindi viene aggiunto alla lista dei todo esistenti.
         */
         addNewTodo() {
             const copyNewTodo = {...this.newToDo}; 
-            // TODO: if (copyNewTodo.length == 0) 
             if (copyNewTodo.text.length == 0){
                 alert('inserisci cosa devi fare')
                 return
@@ -55,6 +54,13 @@ const app = createApp({
                 this.list.push(copyNewTodo); 
                 this.newToDo.text= ''
             }
+        },
+        /*
+        * M2: Visualizzare a fianco ad ogni item ha una "x" 
+        * cliccando su di essa, il todo viene rimosso dalla lista
+        */
+        removeTodo(toDo){
+            this.list = this.list.filter((t) => t !== toDo)
         }
     },
 
