@@ -29,7 +29,7 @@ const app = createApp({
                 },
                 {
                     text:'cose da fare',
-                    done: false,
+                    done: true,
                 },
             ],
 

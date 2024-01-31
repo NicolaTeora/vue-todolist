@@ -34,7 +34,10 @@
                     <ul class="list-group list-group-flush mt-3">
                         <!--M1: Stampare all'interno di una lista HTML un item per ogni todo. -->
                         <li class="list-group-item d-flex justify-content-around" v-for="(toDo, index) in list" >
-                            <span>{{ index}}) {{toDo.text}}</span>
+                            
+                            <!--M1: Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+                            <span v-if="toDo.done" :class="'text-decoration-line-through'">{{ index}}) {{toDo.text}}</span>
+                            <span v-else>{{ index}}) {{toDo.text}}</span>
                             
                             <!-- M2: Visualizzare a fianco ad ogni item ha una "x" cliccando su di essa, il todo viene rimosso dalla lista.-->
                             <button class="text-end" @click="removeTodo(toDo)" ><i class="fa-solid fa-xmark"></i></button>
