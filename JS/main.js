@@ -48,11 +48,13 @@ const app = createApp({
         addNewTodo() {
             const copyNewTodo = {...this.newToDo}; 
             // TODO: if (copyNewTodo.length == 0) 
-            //console.log(this.newToDo) 
-            //console.log(copyNewTodo)
-
-            this.list.push(copyNewTodo); 
-            this.newToDo.text= ''
+            if (copyNewTodo.text.length == 0){
+                alert('inserisci cosa devi fare')
+                return
+            } else {
+                this.list.push(copyNewTodo); 
+                this.newToDo.text= ''
+            }
         }
     },
 
