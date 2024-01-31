@@ -46,12 +46,12 @@ const app = createApp({
         * che quindi viene aggiunto alla lista dei todo esistenti.
         */
         addNewTodo() {
-            const copyNewTodo = {...this.newToDo}; // !
+            const copyNewTodo = {...this.newToDo}; 
             // TODO: if (copyNewTodo.length == 0) 
-            console.log(this.newToDo) 
-            console.log(copyNewTodo)
+            //console.log(this.newToDo) 
+            //console.log(copyNewTodo)
 
-            this.list.push(this.copyNewTodo); // ! provare a passare la copia non reattiva non funziona
+            this.list.push(copyNewTodo); 
             this.newToDo.text= ''
         }
     },
