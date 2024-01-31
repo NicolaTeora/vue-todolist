@@ -42,9 +42,10 @@
                 </div>
 
                 <div class="col-4">
+                    <!--M3: Predisporre un campo di input testuale e un pulsante "aggiungi"-->
                     <label for="add-todo"><h3>Altre cose da fare:</h3></label>
-                    <!-- <input type="text" id="add-todo" class="form-control"> -->
-                    <textarea name="" id="add-todo" class="form-control"></textarea>
+                    <textarea name="" id="add-todo" class="form-control" v-model="newToDo.text"></textarea>
+                    <button @click="addNewTodo()" type="button" class="btn btn-primary mt-4">Aggiungi</button>
                 </div>
             </div>
             
