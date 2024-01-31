@@ -32,19 +32,15 @@
                 <div class="col-4">
                     <h3>Cose da fare:</h3>
                     <ul class="list-group list-group-flush mt-3">
-                        <!-- Stampare all'interno di una lista HTML un item per ogni todo. -->
-                        <li class="list-group-item" v-for="(toDo, index) in list" >{{ index}}) {{toDo.text}}</li>
+                        <!--M1: Stampare all'interno di una lista HTML un item per ogni todo. -->
+                        <li class="list-group-item d-flex justify-content-around" v-for="(toDo, index) in list" >
+                            <span>{{ index}}) {{toDo.text}}</span>
+                            <!-- M2: Visualizzare a fianco ad ogni item ha una "x" -->
+                            <button class="text-end"><i class="fa-solid fa-xmark"></i></button>
+                        </li>
                     </ul>
                 </div>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="col-4">
-                    <h3>Cose fatte:</h3>
-
-                </div>
-            </div>
-            
             
         </div>
     </div>
