@@ -61,7 +61,15 @@ const app = createApp({
         */
         removeTodo(toDo){
             this.list = this.list.filter((t) => t !== toDo)
-        }
+        },
+
+        /*
+        * //TODO: cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente 
+        *  (se done era uguale a false, impostare true e viceversa)
+        */
+       changeDone(){
+        
+       }
     },
 
     mounted() {},

@@ -33,7 +33,7 @@
                     <h3>Cose da fare:</h3>
                     <ul class="list-group list-group-flush mt-3">
                         <!--M1: Stampare all'interno di una lista HTML un item per ogni todo. -->
-                        <li class="list-group-item d-flex justify-content-around" v-for="(toDo, index) in list" >
+                        <li @click="changeDone(toDo)" class="list-group-item d-flex justify-content-around" v-for="(toDo, index) in list" >
                             
                             <!--M1: Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
                             <span v-if="toDo.done" :class="'text-decoration-line-through'">{{ index}}) {{toDo.text}}</span>
