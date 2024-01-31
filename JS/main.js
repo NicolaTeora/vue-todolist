@@ -3,7 +3,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
-            // * oggetto con proprietà text e done
+            //// oggetto con proprietà text e done
             list:[
 
                 {
@@ -28,19 +28,15 @@ const app = createApp({
                 },
             ],
 
-            titleApp: 'To Do list Vue'
+            listToDo: [],
+
+            titleApp: 'To Do list Vue',
         };
     },
 
-    methods: {
-        printHello() {
-            console.log('hi Vue');
-        },
-    },
+    methods: {},
 
-    mounted() {
-        this.printHello();
-    },
+    mounted() {},
 });
 
 app.mount('#app')
