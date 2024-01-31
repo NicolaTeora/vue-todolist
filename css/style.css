@@ -5,3 +5,8 @@ ul li{
 ul li:hover{
     background-color: lightgray;
 }
+
+#add-todo{
+    height: 25%;
+    width: 100%;
+}

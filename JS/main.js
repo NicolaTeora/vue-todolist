@@ -26,6 +26,10 @@ const app = createApp({
                     text:'cose da fare',
                     done: false,
                 },
+                {
+                    text:'cose da fare',
+                    done: false,
+                },
             ],
 
             listToDo: [],
